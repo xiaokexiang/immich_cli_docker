@@ -3,7 +3,7 @@ LABEL maintainer=xxiaokexiang@gmail.com
 WORKDIR /root
 COPY upload.sh entrypoint.sh /root/
 RUN npm install -g @immich/cli \
-&& apk --no-cache add tzdata \
+&& apk --no-cache add tzdata curl\
 && chmod +x upload.sh \
 && chmod +x entrypoint.sh
 ENV TZ=Asia/Shanghai
